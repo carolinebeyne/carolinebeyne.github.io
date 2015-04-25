@@ -1,0 +1,19 @@
+---
+title: Tracy
+subtitle: 2D/3D hybrid rendering
+layout: default
+modal-id: 6-tracy
+post-date: 2014-11-30
+video-id: 125443670
+thumbnail: tracy_ico.png
+img: tracy_demo.png
+alt: 
+project-date: May - November 2014
+project-url: 
+where: Supamonks Studio
+where-url: http://www.supamonks.com/
+field: C++ / PYTHON / BOOST / OPENEXR / OPENCV / ALEMBIC / QT / PYQT / DRAWING INTERPOLATION / 2D/3D / IMAGE SYNTHESIS
+description: <li><p><em>Tracy</em> is a <em>software prototype</em> designed to produce an hybrid 2D & 3D animation rendering. I made the GUI as well as the core.</p></li> <li><p><em>How does it work?</em></p></li> <ol><li><p>Import a 3D animation buffer</p></li> <li><p>Draw in 2D over the 3D on the screen</p></li> <li><p>Launch <em>drawings interpolation</em> between key frames.</p></li> <li><p>Export the 2D animation buffer for compositing.</p></li></ol>
+
+
+---

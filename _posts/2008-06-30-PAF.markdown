@@ -1,0 +1,18 @@
+---
+title: PAF!
+subtitle: Stop Motion
+layout: default
+modal-id: 1-paf
+post-date: 2008-06-30
+video-id: 43242522
+thumbnail: paf_ico.png
+img: paf_demo.png
+alt: PAF!
+project-date: September 2007 - June 2008
+project-url: 
+where: Lycée d'Arsonval
+where-url: http://www.cite-scolaire-arsonval.fr/
+field: STOP MOTION / SHORT MOVIE / ANIMATION / FINAL CUT PRO
+description: <li><p><em>PAF!</em> is an <em>animated short movie</em> made in <em>stop motion</em></p></li> <li><p>With a friend, we made it during our senior high school year, for our Cinema course</p></li> <li><p>We did every step</p></li>  <ol><li><p>Scenario</p></li> <li><p>Story boarding</p></li> <li><p>Recording</p></li> <li><p>Video Editing</p></li> <li><p>DVD cover for the jury</p></li></ol> <li><p>We graduated with <em>honors</em> on this project</p></li>
+
+---
