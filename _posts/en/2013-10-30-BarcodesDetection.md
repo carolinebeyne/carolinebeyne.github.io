@@ -1,4 +1,5 @@
 ---
+lang: en
 title: Barcodes Detection
 subtitle: School Project
 layout: default

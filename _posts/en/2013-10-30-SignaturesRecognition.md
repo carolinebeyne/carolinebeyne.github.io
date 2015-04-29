@@ -1,4 +1,5 @@
 ---
+lang: en
 title: Signatures Recognition
 subtitle: School Project
 layout: default

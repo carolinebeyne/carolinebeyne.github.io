@@ -1,4 +1,5 @@
 ---
+lang: en
 title: Tetris Lua
 subtitle: Tiny Tetris-like in Lua with Löve2D
 layout: default

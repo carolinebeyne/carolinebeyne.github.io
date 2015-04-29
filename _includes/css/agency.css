@@ -428,6 +428,17 @@ fieldset[disabled] .btn-xl.active {
     color: #{{ site.color.primary }};
 }
 
+.navbar-default .nav li a.navbar-lang {
+    padding-right: 0px;
+    padding-left: 80px;
+    color: #{{ site.color.secondary-yellow }};
+}
+
+.navbar-default .nav li a.navbar-lang:hover,
+.navbar-default .nav li a.navbar-lang:focus {
+    color: #{{ site.color.secondary }};
+}
+
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
     color: #fff;

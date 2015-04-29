@@ -1,0 +1,62 @@
+ <!-- Projects Modals -->
+ {% for post in site.posts %}
+    <div class="portfolio-modal modal fade" id="project_{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <div class="text-primary big-title">
+                                    <h2>{{ post.title }}</h2>
+                                </div>
+
+                                <hr class="star-primary">
+                                    <a href="{{ post.project-url }}">
+                                        {% if post.video-id and post.video-id != "" and post.video-id != nil %}
+                                            <iframe src="https://player.vimeo.com/video/{{ post.video-id }}?color=ff0179" width ="700" height="407" frameborder="0" webkitallowfullscreen mozallowfullscreen     allowfullscreen></iframe>
+                                        {% endif %}
+
+                                        {% if post.img and post.img != "" and post.img != nil %}
+                                            <img src="../img/projects/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                                        {% endif %}
+                                    </a>
+                                <hr class="star-primary">
+                                <br />
+                                <div id="modal-list">
+                                    <ol>
+                                        {{ post.description }}
+                                    </ol>
+                                </div>
+                                <br />
+                                <ul class="list-inline item-details">
+                                    <strong><a href="{{ post.project-url }}">{{ post.project-url }}</a>
+                                    </strong>
+                                </ul>
+                                <ul class="list-inline item-details">
+                                    <li>
+                                        <strong><a href="{{ post.where-url }}">{{ post.where }}</a>
+                                        </strong>
+                                    </li>
+                                    <li>
+                                        <strong>{{ post.post-date }}</strong>
+                                    </li>
+                                    <li># 
+                                        <strong>{{ post.field }}</strong>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
