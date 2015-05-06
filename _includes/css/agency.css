@@ -339,6 +339,16 @@ fieldset[disabled] .btn-primary.active {
     background-color: #{{ site.color.primary }};
 }
 
+
+@media(min-width:768px) {
+    .btn-xl {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+
+
 .btn-xl:hover,
 .btn-xl:focus,
 .btn-xl:active,
@@ -495,6 +505,7 @@ header {
     -o-background-size: cover;
 }
 
+
 header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -517,7 +528,7 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 700;
     line-height: 50px;
 }
@@ -544,6 +555,54 @@ header .intro-text .intro-heading {
         font-weight: 700;
         line-height: 75px;
     }
+}
+
+.intro {
+    text-align: center;
+    color: #fff;
+}
+
+.intro .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.intro .intro-text .intro-name {
+    margin-bottom: 50px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    color: #{{ site.color.secondary-yellow }};
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    text-shadow: 1px 1px 0 rgb(0,0,0) , -1px -1px 0 rgb(255,255,255) ;
+    -webkit-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 500ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+
+@media(min-width:768px) {
+    .intro .intro-text {
+        padding-top: 250px;
+        padding-bottom: 200px;
+    }
+
+    .intro .intro-text .intro-name {
+        font-size: 50px;
+    }
+}
+
+body#background {
+  background: url('../img/header-nb.png') no-repeat 50% 50% fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 section {
@@ -1007,7 +1066,6 @@ section h3.section-subheading {
     border-radius:12px;
     border:2px solid #FBCFC6;
     display:inline-block;
-    /*cursor:pointer;*/
     font-family:Arial;
     font-size:12px;
     padding:14px 37px;
@@ -1039,4 +1097,81 @@ section h3.section-subheading {
 .mini-block {
     max-width: 300px;
     margin: 0 auto;
+}
+
+.margin-50 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/***************************
+********* MAIN PAGE ********
+***************************/
+@media(min-width:768px)
+{
+    .margin-50 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+.img-logo img {    
+    max-height: 50%;
+    max-width: 50%;
+    margin-top: 50px;
+}
+
+@font-face {
+    font-family: "QualiteDeluxePlatinium";
+    src: url("css/QualiteDeluxePlatinium.ttf") format("truetype");
+}
+
+.txt-logo .text {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    visibility:hidden;
+    font-family: "QualiteDeluxePlatinium", Verdana, Tahoma;
+    font-size: 300%
+}
+
+.txt-logo:hover .text {
+    visibility:visible;
+}
+
+.shadow { 
+   color: white; 
+   font: bold 52px Helvetica, Arial, Sans-Serif;
+   text-shadow: 1px 1px #{{ site.color.primary }}, 
+                2px 2px #{{ site.color.primary }}, 
+                3px 3px #{{ site.color.primary }};
+   -webkit-transition: all 0.12s ease-out;
+   -moz-transition:    all 0.12s ease-out;
+   -ms-transition:     all 0.12s ease-out;
+   -o-transition:      all 0.12s ease-out;
+}
+
+.shadow:hover {
+   position: relative; 
+   top: -3px; 
+   left: -3px; 
+   text-shadow: 1px 1px #{{ site.color.primary }}, 
+                2px 2px #{{ site.color.primary }}, 
+                3px 3px #{{ site.color.primary }}, 
+                4px 4px #{{ site.color.primary }}, 
+                5px 5px #{{ site.color.primary }}, 
+                6px 6px #{{ site.color.primary }};
+}
+
+@media(min-width:992px) {
+    .img-logo img {    
+        max-height: 20%;
+        max-width: 20%;
+        margin-top: 100px;
+    }
+
+    .txt-logo .text {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        font-size: 500%;
+    }
 }

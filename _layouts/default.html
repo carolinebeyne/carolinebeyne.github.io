@@ -1,26 +1,5 @@
-{% comment %}On récupère la langue en fonction de l'URL{% endcomment %}
-{% capture locale %}{{ page.url | truncate: 3, "" | remove: "/" }}{% endcapture %}
-
-{% unless site.authorized_locales contains locale %}
-{% assign locale = site.default_locale %}
-{% endunless %}
-
-
 <!DOCTYPE html>
 <html lang="{{ locale }}">
     {% include head.html %}
-
-    <body id="page-top" class="index">
-
-        {% include header.html %}
-        {% include experience.html %}
-        {% include skills.html %}
-        {% include education.html %}
-        {% include projects.html %}
-        {% include about-me.html %}
-        {% include contact.html %}
-        {% include modals.html %}
-        {% include js.html %}
-
-    </body>
+	{% include header.html %}
 </html>
