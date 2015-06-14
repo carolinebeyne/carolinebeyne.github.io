@@ -1129,14 +1129,14 @@ section h3.section-subheading {
 .txt-logo .text {
     margin-top: 25px;
     margin-bottom: 25px;
-    visibility:hidden;
+    /*visibility:hidden;*/
     font-family: "QualiteDeluxePlatinium", Verdana, Tahoma;
     font-size: 300%
 }
 
-.txt-logo:hover .text {
+/*.txt-logo:hover .text {
     visibility:visible;
-}
+}*/
 
 .shadow { 
    color: white; 
@@ -1150,7 +1150,7 @@ section h3.section-subheading {
    -o-transition:      all 0.12s ease-out;
 }
 
-.shadow:hover {
+/*.shadow:hover {
    position: relative; 
    top: -3px; 
    left: -3px; 
@@ -1160,7 +1160,7 @@ section h3.section-subheading {
                 4px 4px #{{ site.color.primary }}, 
                 5px 5px #{{ site.color.primary }}, 
                 6px 6px #{{ site.color.primary }};
-}
+}*/
 
 @media(min-width:992px) {
     .img-logo img {    
