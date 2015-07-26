@@ -4,11 +4,12 @@ title: SV Calendar Maker
 subtitle: Tiny software for ACM Siggraph Student Volunteer schedule
 layout: default
 modal-id: 8-svcalendarmaker
-post-date: 25-25-2015
+post-date: 2014-07-30
+video-id: 134546342
 thumbnail: sv_cal_ico.png
 img: sv_cal.png
 alt: SVCalendarMaker
-project-date: May 2015
+project-date: July 2014
 project-url: https://github.com/By0ute/SVCalendarMaker
 where: 
 where-url: 
