@@ -169,6 +169,11 @@ span.text-content {
     color: #FBCFC6;
 }
 
+.text-light-grey-left {
+    color: #FBCFC6;
+    text-align: left;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -428,6 +433,7 @@ fieldset[disabled] .btn-xl.active {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
+    font-size: 12px;
     letter-spacing: 1px;
     color: #fff;
 }
