@@ -14,7 +14,7 @@ color:
   secondary-yellow: FED136
 
 # More
-highlighter: pygments
+highlighter: rouge
 
 default_locale:     "en"
 authorized_locales: ["en", "fr"]
