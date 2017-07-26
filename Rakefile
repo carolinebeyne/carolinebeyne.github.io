@@ -17,8 +17,6 @@ CONFIG = {
   'plugins' => File.join(SOURCE, "_plugins"),
   'includes' => File.join(SOURCE, "_includes"),
   'post_ext' => "md",
-#   'categories' => File.join(SOURCE, "categories"),
-#   'tags' => File.join(SOURCE, "tags")
 }
 
 task default: %w[publish]
@@ -45,10 +43,8 @@ task :publish => [:generate] do
     system "git add ."
     message = "Site updated at #{Time.now.utc}"
     system "git commit -am #{message.inspect}"
-    system "git remote add #{GITHUB_REMOTE} git@github.com:#{GITHUB_REPONAME}.git"
-    # system "git remote add origin git@github.com-by0ute:#{GITHUB_REPONAME}.git"
-    # system "git push origin #{GITHUB_REPO_BRANCH} --force"
-    system "git push #{GITHUB_REMOTE} #{GITHUB_REPO_BRANCH}"
+    system "git remote add #{GITHUB_REMOTE} git@cb.github.com:#{GITHUB_REPONAME}.git"
+    system "git push #{GITHUB_REMOTE} #{GITHUB_REPO_BRANCH} --force"
 
     Dir.chdir pwd
   end
@@ -58,17 +54,6 @@ desc "Begin a new post in #{CONFIG['posts']}"
 task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
   title = ENV["title"] || "New post"
-
-#   tags = ""
-#   categories = ""
-
-#   # tags
-#   env_tags = ENV["tags"] || ""
-#   tags = strtag(env_tags)
-
-#   # categorias
-#   env_cat = ENV["category"] || ""
-#   categories = strtag(env_cat)
 
   # slug do post
   slug = mount_slug(title)
@@ -96,10 +81,6 @@ task :post do
     post.puts "comments: true"
     post.puts "description: \"#{title}\""
     post.puts 'keywords: ""'
-    # post.puts "categories:"
-    # post.puts "#{categories}"
-    # post.puts "tags:"
-    # post.puts "#{tags}"
     post.puts "---"
   end
 end # task :post
@@ -131,68 +112,6 @@ task :page do
     post.puts "{% include JB/setup %}"
   end
 end # task :page
-
-
-# desc "Begin a new category in #{CONFIG['categories']}"
-# task :category do
-#   abort("rake aborted: '#{CONFIG['categories']}' directory not found.") unless FileTest.directory?(CONFIG['categories'])
-#   title = ENV["title"] || "new-category"
-#   slug  = mount_slug(title)
-
-#   filename = File.join(CONFIG['categories'], "category-#{slug}.html")
-#   if File.exist?(filename)
-#     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
-#   end
-
-#   puts "Creating new category: #{filename}"
-#   open(filename, 'w') do |category|
-#     category.puts "---"
-#     category.puts "layout: category"
-#     category.puts "title: \"#{title.gsub(/-/,' ')}\""
-#     category.puts "slug: #{slug}"
-#     category.puts "permalink: /category/#{slug}/"
-#     category.puts "---"
-#   end
-
-#   puts "Write in categories.yml file"
-#   open("#{SOURCE}_data/categories.yml", 'ab+') do |category|
-#     category.puts ""
-#     category.puts "- slug: #{slug}"
-#     category.puts "  name: #{title}"
-#   end
-#   puts "Successfully created!"
-# end # task :category
-
-
-# desc "Begin a new tag in #{CONFIG['tags']}"
-# task :tag do
-#   abort("rake aborted: '#{CONFIG['tags']}' directory not found.") unless FileTest.directory?(CONFIG['tags'])
-#   title = ENV["title"] || "new-tag"
-#   slug  = mount_slug(title)
-
-#   filename = File.join(CONFIG['tags'], "tag-#{slug}.html")
-#   if File.exist?(filename)
-#     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
-#   end
-
-#   puts "Creating new tag: #{filename}"
-#   open(filename, 'w') do |tag|
-#     tag.puts "---"
-#     tag.puts "layout: tag"
-#     tag.puts "title: \"#{title.gsub(/-/,' ')}\""
-#     tag.puts "slug: #{slug}"
-#     tag.puts "permalink: /tag/#{slug}/"
-#     tag.puts "---"
-#   end
-
-#   puts "Write in tags.yml file"
-#   open("#{SOURCE}_data/tags.yml", 'ab+') do |tag|
-#     tag.puts ""
-#     tag.puts "- slug: #{slug}"
-#     tag.puts "  name: #{title}"
-#   end
-#   puts "Successfully created!"
-# end # task :tag
 
 def mount_slug(title)
   slug = str_clean(title)
